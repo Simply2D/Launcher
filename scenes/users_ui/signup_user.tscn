@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=3 uid="uid://de4nfw76jdtjm"]
+
+[ext_resource type="Script" path="res://scenes/scripts/user/signup_user.gd" id="1_a5cu4"]
+[ext_resource type="Texture2D" uid="uid://bt4wolt3yfu17" path="res://assets/images/backgrounds/user/signup_user.png" id="2_8veas"]
+[ext_resource type="Texture2D" uid="uid://dro5a1d1uiw2k" path="res://assets/images/buttons/data/confirm.png" id="3_begr4"]
+[ext_resource type="FontFile" uid="uid://7pdwxwm5ujj7" path="res://assets/fonts/bantayog/Bantayog-Regular.otf" id="4_yfmti"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3gio1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wsgin"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qjngi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qh8im"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpbdb"]
+bg_color = Color(0, 0, 0, 0.0784314)
+
+[node name="ui_signup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a5cu4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8veas")
+
+[node name="bt_confirm" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 530.0
+offset_right = 370.0
+offset_bottom = 590.0
+
+[node name="TextureRect" type="TextureRect" parent="bt_confirm"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_begr4")
+expand_mode = 2
+
+[node name="username" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 273.0
+offset_right = 372.0
+offset_bottom = 321.0
+theme_override_colors/font_color = Color(0.113725, 0.67451, 0.72549, 1)
+theme_override_colors/font_placeholder_color = Color(0.113725, 0.67451, 0.72549, 0.211765)
+theme_override_colors/caret_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("4_yfmti")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3gio1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wsgin")
+placeholder_text = "20 characters"
+max_length = 20
+clear_button_enabled = true
+
+[node name="gender" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 367.0
+offset_right = 318.0
+offset_bottom = 400.0
+theme_override_colors/font_color = Color(0.113725, 0.67451, 0.72549, 1)
+theme_override_colors/font_selected_color = Color(0.0588235, 0.521569, 0.560784, 1)
+theme_override_fonts/font = ExtResource("4_yfmti")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qjngi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qh8im")
+theme_override_styles/selected_focus = SubResource("StyleBoxFlat_kpbdb")
+item_count = 2
+max_columns = 2
+item_0/text = "Male"
+item_1/text = "Female"
+
+[connection signal="gui_input" from="bt_confirm" to="." method="_on_bt_confirm_gui_input"]
+[connection signal="mouse_exited" from="username" to="." method="_on_username_mouse_exited"]
+[connection signal="item_selected" from="gender" to="." method="_on_gender_item_selected"]

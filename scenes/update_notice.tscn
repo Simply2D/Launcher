@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmr0cdb8qiewe"]
+
+[ext_resource type="Texture2D" uid="uid://c8hdyhqki8c8l" path="res://assets/images/backgrounds/update.png" id="1_d74b6"]
+[ext_resource type="Script" path="res://scenes/scripts/other/update.gd" id="1_eg2cy"]
+[ext_resource type="Texture2D" uid="uid://xumk6hvhs83g" path="res://assets/images/buttons/file/update.png" id="2_vayds"]
+[ext_resource type="FontFile" uid="uid://7pdwxwm5ujj7" path="res://assets/fonts/bantayog/Bantayog-Regular.otf" id="4_vja2g"]
+
+[node name="update_notice" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eg2cy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d74b6")
+
+[node name="bt_update" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -109.0
+offset_right = 160.0
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="bt_update"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_vayds")
+expand_mode = 2
+
+[node name="current" type="Label" parent="."]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 314.0
+offset_right = 625.0
+offset_bottom = 341.0
+theme_override_colors/font_color = Color(0.113725, 0.67451, 0.72549, 1)
+theme_override_colors/font_outline_color = Color(0.113725, 0.67451, 0.72549, 1)
+theme_override_fonts/font = ExtResource("4_vja2g")
+theme_override_font_sizes/font_size = 25
+
+[node name="update" type="Label" parent="."]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 336.0
+offset_right = 625.0
+offset_bottom = 363.0
+theme_override_colors/font_color = Color(0.113725, 0.67451, 0.72549, 1)
+theme_override_colors/font_outline_color = Color(0.113725, 0.67451, 0.72549, 1)
+theme_override_fonts/font = ExtResource("4_vja2g")
+theme_override_font_sizes/font_size = 25
+
+[connection signal="gui_input" from="bt_update" to="." method="_on_bt_update_gui_input"]

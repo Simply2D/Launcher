@@ -1,0 +1,401 @@
+[gd_scene load_steps=24 format=3 uid="uid://yspf40njy2p7"]
+
+[ext_resource type="Script" path="res://scenes/scripts/user/returning_user.gd" id="1_0u2rw"]
+[ext_resource type="Texture2D" uid="uid://cwpicxcvtwhds" path="res://assets/images/backgrounds/user/returning_user.png" id="2_d1dfu"]
+[ext_resource type="Texture2D" uid="uid://tdpg1b5ggwa" path="res://assets/images/buttons/scene/projects.png" id="3_l3a4j"]
+[ext_resource type="Texture2D" uid="uid://ws551nqs2ve2" path="res://assets/images/buttons/external/github.png" id="4_psmcj"]
+[ext_resource type="Texture2D" uid="uid://ic040q4hwg64" path="res://assets/images/buttons/scene/setting.png" id="5_xlti1"]
+[ext_resource type="Texture2D" uid="uid://75yq65kc5g15" path="res://assets/images/buttons/external/exit.png" id="6_4v2bd"]
+[ext_resource type="Script" path="res://scenes/scripts/other/setting.gd" id="7_cgan4"]
+[ext_resource type="Texture2D" uid="uid://cqf5jtvklm4bg" path="res://assets/images/backgrounds/setting.png" id="8_apkni"]
+[ext_resource type="Texture2D" uid="uid://dq0asokglhoul" path="res://assets/images/buttons/data/apply_changes.png" id="9_6sdgf"]
+[ext_resource type="Texture2D" uid="uid://ono20sggyjir" path="res://assets/images/buttons/scene/main_page.png" id="10_jc62o"]
+[ext_resource type="FontFile" uid="uid://7pdwxwm5ujj7" path="res://assets/fonts/bantayog/Bantayog-Regular.otf" id="11_igk46"]
+[ext_resource type="Texture2D" uid="uid://42gklujt70s7" path="res://assets/images/backgrounds/projects.png" id="12_j7wfw"]
+[ext_resource type="Script" path="res://scenes/scripts/other/projects.gd" id="12_ua3hg"]
+[ext_resource type="Texture2D" uid="uid://crnk7k2c4hehn" path="res://assets/images/projects/game_icons/calculator.png" id="14_cgsaf"]
+[ext_resource type="Texture2D" uid="uid://byr4x5cu5snfo" path="res://assets/images/projects/game_icons/elfilauncher.png" id="15_yls8v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eabab"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_71bxu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hnv3i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ydi5p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfika"]
+bg_color = Color(0, 0, 0, 0.0784314)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8rqex"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7q35"]
+bg_color = Color(0, 0, 0, 0.392157)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nf53g"]
+load_path = "res://.godot/imported/download.png-a8f3e98b6afe59b692e2e2187e251386.ctex"
+
+[node name="returning_user" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0u2rw")
+
+[node name="main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_d1dfu")
+
+[node name="bt_projects" type="Control" parent="main"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 200.0
+offset_right = 370.0
+offset_bottom = 260.0
+
+[node name="TextureRect" type="TextureRect" parent="main/bt_projects"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_l3a4j")
+expand_mode = 2
+
+[node name="bt_github" type="Control" parent="main"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 260.0
+offset_right = 370.0
+offset_bottom = 320.0
+
+[node name="TextureRect" type="TextureRect" parent="main/bt_github"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_psmcj")
+expand_mode = 2
+
+[node name="bt_setting" type="Control" parent="main"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 320.0
+offset_right = 370.0
+offset_bottom = 380.0
+
+[node name="TextureRect" type="TextureRect" parent="main/bt_setting"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_xlti1")
+expand_mode = 2
+
+[node name="bt_exit" type="Control" parent="main"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 530.0
+offset_right = 370.0
+offset_bottom = 590.0
+
+[node name="TextureRect" type="TextureRect" parent="main/bt_exit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_4v2bd")
+expand_mode = 2
+
+[node name="setting" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_cgan4")
+
+[node name="TextureRect" type="TextureRect" parent="setting"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_apkni")
+
+[node name="bt_applychange" type="Control" parent="setting"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 190.0
+offset_top = 277.0
+offset_right = 436.0
+offset_bottom = 323.0
+
+[node name="TextureRect" type="TextureRect" parent="setting/bt_applychange"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_6sdgf")
+expand_mode = 2
+
+[node name="bt_mainpage" type="Control" parent="setting"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 530.0
+offset_right = 370.0
+offset_bottom = 590.0
+
+[node name="TextureRect" type="TextureRect" parent="setting/bt_mainpage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_jc62o")
+expand_mode = 2
+
+[node name="username" type="LineEdit" parent="setting"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 174.0
+offset_right = 427.0
+offset_bottom = 209.0
+theme_override_colors/font_color = Color(0.113725, 0.67451, 0.72549, 1)
+theme_override_colors/font_placeholder_color = Color(0.113725, 0.67451, 0.72549, 0.211765)
+theme_override_colors/caret_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("11_igk46")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eabab")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_71bxu")
+placeholder_text = "20 characters"
+max_length = 20
+clear_button_enabled = true
+
+[node name="gender" type="ItemList" parent="setting"]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 239.0
+offset_right = 425.0
+offset_bottom = 272.0
+theme_override_colors/font_color = Color(0.113725, 0.67451, 0.72549, 1)
+theme_override_colors/font_selected_color = Color(0.0588235, 0.521569, 0.560784, 1)
+theme_override_fonts/font = ExtResource("11_igk46")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hnv3i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ydi5p")
+theme_override_styles/selected_focus = SubResource("StyleBoxFlat_lfika")
+item_count = 2
+max_columns = 2
+item_0/text = "Male"
+item_1/text = "Female"
+
+[node name="projects" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_ua3hg")
+
+[node name="TextureRect" type="TextureRect" parent="projects"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_j7wfw")
+
+[node name="bt_mainpage" type="Control" parent="projects"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 530.0
+offset_right = 370.0
+offset_bottom = 590.0
+
+[node name="TextureRect" type="TextureRect" parent="projects/bt_mainpage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_jc62o")
+expand_mode = 2
+
+[node name="bt_exit" type="Control" parent="projects"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 471.0
+offset_right = 370.0
+offset_bottom = 531.0
+
+[node name="TextureRect" type="TextureRect" parent="projects/bt_exit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_4v2bd")
+expand_mode = 2
+
+[node name="calculator" type="Control" parent="projects"]
+anchors_preset = 0
+offset_left = 70.0
+offset_top = 130.0
+offset_right = 230.0
+offset_bottom = 340.0
+
+[node name="thumbnail" type="TextureRect" parent="projects/calculator"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 1.0
+offset_bottom = 150.0
+grow_horizontal = 2
+texture = ExtResource("14_cgsaf")
+expand_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="projects/calculator/thumbnail"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_8rqex")
+theme_override_styles/fill = SubResource("StyleBoxFlat_v7q35")
+show_percentage = false
+
+[node name="bt_action" type="Control" parent="projects/calculator"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -50.0
+offset_right = -15.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="projects/calculator/bt_action"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_nf53g")
+expand_mode = 2
+
+[node name="elfilauncher" type="Control" parent="projects"]
+anchors_preset = 0
+offset_left = 235.0
+offset_top = 130.0
+offset_right = 395.0
+offset_bottom = 340.0
+
+[node name="thumbnail" type="TextureRect" parent="projects/elfilauncher"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 1.0
+offset_bottom = 150.0
+grow_horizontal = 2
+texture = ExtResource("15_yls8v")
+expand_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="projects/elfilauncher/thumbnail"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_8rqex")
+theme_override_styles/fill = SubResource("StyleBoxFlat_v7q35")
+show_percentage = false
+
+[node name="bt_action" type="Control" parent="projects/elfilauncher"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -50.0
+offset_right = -15.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="projects/elfilauncher/bt_action"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_nf53g")
+expand_mode = 2
+
+[connection signal="gui_input" from="main/bt_projects" to="." method="_on_bt_projects_gui_input"]
+[connection signal="gui_input" from="main/bt_github" to="." method="_on_bt_github_gui_input"]
+[connection signal="gui_input" from="main/bt_setting" to="." method="_on_bt_setting_gui_input"]
+[connection signal="gui_input" from="main/bt_exit" to="." method="_on_bt_exit_gui_input"]
+[connection signal="gui_input" from="setting/bt_mainpage" to="." method="_on_bt_mainpage_gui_input"]
+[connection signal="gui_input" from="projects/bt_mainpage" to="." method="_on_bt_mainpage_gui_input"]
+[connection signal="gui_input" from="projects/bt_exit" to="projects" method="_on_bt_mainpage_gui_input"]
+[connection signal="gui_input" from="projects/calculator/bt_action" to="projects" method="_on_calculator_gui_input"]
+[connection signal="gui_input" from="projects/elfilauncher/bt_action" to="projects" method="_on_elfilauncher_gui_input"]

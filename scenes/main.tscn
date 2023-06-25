@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqk2qkci2us2f"]
+
+[ext_resource type="PackedScene" uid="uid://tei15ubd5jjw" path="res://scenes/users_ui/new_user.tscn" id="1_bcapx"]
+[ext_resource type="Script" path="res://scenes/scripts/other/startup.gd" id="1_n652x"]
+[ext_resource type="PackedScene" uid="uid://yspf40njy2p7" path="res://scenes/users_ui/returning_user.tscn" id="2_m8gja"]
+[ext_resource type="PackedScene" uid="uid://dmr0cdb8qiewe" path="res://scenes/update_notice.tscn" id="4_wxeis"]
+
+[node name="MAIN" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n652x")
+
+[node name="new_user" parent="." instance=ExtResource("1_bcapx")]
+visible = false
+layout_mode = 1
+
+[node name="returning_user" parent="." instance=ExtResource("2_m8gja")]
+visible = false
+layout_mode = 1
+
+[node name="update_notice" parent="." instance=ExtResource("4_wxeis")]
+visible = false
+layout_mode = 1
